@@ -27,7 +27,7 @@ Selecting this archetype, and filling in values for groupId, artifactId, version
 ```
 cd myproj
 mvn clean verify
-java -jar myproj-version.jar
+java -jar target/myproj-version.jar
 ```
 
 At this point, the project should launch, and the system browser should pop open to https://localhost:8080/.
