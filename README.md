@@ -14,3 +14,20 @@ mvn clean install
 mvn archetype:crawl
 ```
 Then reindex your local maven repository in your ide. Now you can create new projects using this archetype.
+
+Alternately, you can simply generate the project using maven on the command line with something like,
+
+```
+cd ~/projects
+mvn archetype:generate -DarchetypeCatalog=local
+```
+
+Selecting this archetype, and filling in values for groupId, artifactId, version, and package. Then
+
+```
+cd myproj
+mvn clean verify
+java -jar myproj-version.jar
+```
+
+At this point, the project should launch, and the system browser should pop open to https://localhost:8080/.
